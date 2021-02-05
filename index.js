@@ -40,6 +40,18 @@ inquirer.prompt([
 
   ## The Description
   ${response.description}
+
+  ## Motivation
+  ${response.motivation}
+
+  ## Problem That is Solved
+  ${response.problem}
+
+  ## What You Learned
+  ${response.learn}
+
+  ## Plans for Future Developement
+  ${response.future}
   `
 fs.writeFile('README.md', readME, (err) => 
 err ? console.error(err) : console.log('Success!'))
