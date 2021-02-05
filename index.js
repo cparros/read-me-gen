@@ -6,44 +6,45 @@ const inquirer = require('inquirer');
 inquirer.prompt([
   {
     type: 'input',
-    input: 'What is the title of your project?',
+    message: 'What is the title of your project?',
     name: 'title'
   },
   {
     type: 'input',
-    input: 'Could you give a description of your project?',
+    message: 'Could you give a description of your project?',
     name: 'description'
   },
   {
     type: 'input',
-    input: 'What was the motivation behind your project?',
+    message: 'What was the motivation behind your project?',
     name: 'motivation'
   },
   {
     type: 'input',
-    input: 'What problem does your project solve?',
+    message: 'What problem does your project solve?',
     name: 'problem'
   },
   {
     type: 'input',
-    input: 'What did you learn while completing this project?',
+    message: 'What did you learn while completing this project?',
     name: 'learn'
   },
   {
     type: 'input',
-    input: 'What is your future plan for this project?',
+    message: 'What is your future plan for this project?',
     name: 'future'
     }
 ]).then(response => {
   const readME = `
   # ${response.title}
+
+  ## The Description
+  ${response.description}
   `
 fs.writeFile('README.md', readME, (err) => 
-err ? console.error(err) : console.log('Success!')
+err ? console.error(err) : console.log('Success!'))
+  }
 )
-})
-
-
 
 
 
