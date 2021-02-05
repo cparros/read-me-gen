@@ -35,7 +35,7 @@ inquirer.prompt([
     },
 ]).then(response => {
   const readME = `
-  
+  # ${response.title}
   `
 
 })

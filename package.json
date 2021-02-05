@@ -1,0 +1,19 @@
+{
+  "name": "read-me-gen",
+  "version": "1.0.0",
+  "description": "READme gen",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cparros/read-me-gen.git"
+  },
+  "author": "Clayton Parros",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cparros/read-me-gen/issues"
+  },
+  "homepage": "https://github.com/cparros/read-me-gen#readme"
+}
