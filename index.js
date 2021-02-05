@@ -1,3 +1,5 @@
+//TO CREATE README OPEN AN INTEGRATED TERMINAL AND ENTER "NODE INDEX.JS TO BEGIN README CREATION"
+
 // TODO: Include packages needed for this application
 const fs = require('fs');
 const inquirer = require('inquirer');
@@ -52,6 +54,11 @@ inquirer.prompt([
 
   ## Plans for Future Developement
   ${response.future}
+
+  ## Image of code to application
+  <p align="center">
+    <img alt="Image of code that creates readme file src=./images/readmeGen.png">
+  </p>
   `
 fs.writeFile('README.md', readME, (err) => 
 err ? console.error(err) : console.log('Success!'))
