@@ -1,6 +1,7 @@
 // TODO: Include packages needed for this application
 const fs = require('fs');
-const inquirer = require('inquirer')
+const inquirer = require('inquirer');
+
 // TODO: Create an array of questions for user input
 inquirer.prompt([
   {
@@ -32,17 +33,17 @@ inquirer.prompt([
     type: 'input',
     input: 'What is your future plan for this project?',
     name: 'future'
-    },
+    }
 ]).then(response => {
   const readME = `
   # ${response.title}
   `
-
+fs.writeFile('README.md', readME, (err) => 
+err ? console.error(err) : console.log('Success!')
+)
 })
 
-fs.writeFile('README.md', readME, (err) => 
-err? console.error(err) : console.log('Success!')
-)
+
 
 
 
