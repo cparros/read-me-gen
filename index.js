@@ -55,10 +55,8 @@ inquirer.prompt([
   ## Plans for Future Developement
   ${response.future}
 
-  ## Image of code to application
-  <p align="center">
-    <img alt="Image of code that creates readme file src=./images/readmeGen.png">
-  </p>
+  ### Image of code to application
+  ![screenshot](./Images/readmeGen.png)
   `
 fs.writeFile('README.md', readME, (err) => 
 err ? console.error(err) : console.log('Success!'))
