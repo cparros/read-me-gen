@@ -54,7 +54,7 @@ inquirer.prompt([
     },
     {
       type: 'input',
-      message: 'Questions?',
+      message: 'What is your Github Username?',
       name: 'questions'
     }
 ]).then(response => {
@@ -100,7 +100,7 @@ inquirer.prompt([
   ${response.tests}
 
   ## Questions
-  ${response.questions}
+  https://github.com/${response.questions}
 
   ### Image of code to application (Instructional Video Below Image!)
   ![screenshot](./Images/readmeGen.png)
