@@ -63,13 +63,14 @@ inquirer.prompt([
   const apacheBadge = '[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)'
 
   let displayBadge 
-    if(this.stack = mit) {
+    if(response.stack = mit) {
+      console.log(response.choices)
       displayBadge = mitbadge
-    }
-    if(this.stack = gnu) {
+    } 
+    else if(this.stack = gnu) {
       displayBadge = gnuBadge
     }
-    if(this.stack = apache) {
+    else if(this.stack = apache) {
       displayBadge = apacheBadge
     }
 
