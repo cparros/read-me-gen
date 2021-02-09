@@ -58,9 +58,24 @@ inquirer.prompt([
       name: 'questions'
     }
 ]).then(response => {
-  const badge = `https://img.shields.io/github/${response.stack}/cparros/read-me-gen`
+  const mitbadge = '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)'
+  const gnuBadge = '[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)'
+  const apacheBadge = '[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)'
+
+  let displayBadge 
+    if(this.stack = mit) {
+      displayBadge = mitbadge
+    }
+    if(this.stack = gnu) {
+      displayBadge = gnuBadge
+    }
+    if(this.stack = apache) {
+      displayBadge = apacheBadge
+    }
+
+
   const readME = `
-  # ${response.title} [<img src="${badge}]
+  # ${response.title} ${displayBadge}
   
   ## The Description
   ${response.description}
