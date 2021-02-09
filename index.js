@@ -5,6 +5,9 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
 
+const mit = 'MIT License'
+const apache = 'Apache License v2.0'
+const gnu = 'GNU General Public License v3.0'
 // TODO: Create an array of questions for user input
 inquirer.prompt([
   {
@@ -19,42 +22,69 @@ inquirer.prompt([
   },
   {
     type: 'input',
-    message: 'What was the motivation behind your project?',
-    name: 'motivation'
+    message: 'Please Input a table of contents for your project.',
+    name: 'tableOfContents'
   },
   {
     type: 'input',
-    message: 'What problem does your project solve?',
-    name: 'problem'
+    message: 'How is your project installed?',
+    name: 'installation'
   },
   {
     type: 'input',
-    message: 'What did you learn while completing this project?',
-    name: 'learn'
+    message: 'What is the usage of this application?',
+    name: 'usage'
   },
   {
+    type: 'checkbox',
+    message: 'What license do you have for this applicaiton?',
+    name: 'stack',
+    choices: [mit, gnu, apache],
+    },
+    {
+      type: 'input',
+      message: 'Who is contributing to this project? Please enter your GitHub Username!',
+      name: 'contributing'
+    }
+      ,
+    {
     type: 'input',
-    message: 'What is your future plan for this project?',
-    name: 'future'
+    message: 'What are the tests for this project',
+    name: 'tests'
+    },
+    {
+      type: 'input',
+      message: 'Questions?',
+      name: 'questions'
     }
 ]).then(response => {
+  const badge = 'https://img.shields.io/github/license/cparros/read-me-gen'
   const readME = `
-  # ${response.title}
-
+  # ${response.title} ${badge}
+  
   ## The Description
   ${response.description}
 
-  ## Motivation
-  ${response.motivation}
+  ## Table of Contents
+  ${response.tableOfContents}
 
-  ## Problem That is Solved
-  ${response.problem}
+  ## Installation
+  ${response.installation}
 
-  ## What You Learned
-  ${response.learn}
+  ## Usage
+  ${response.usage}
 
-  ## Plans for Future Developement
-  ${response.future}
+  ## License
+  ${response.stack}
+
+  ## Contributors
+  ${response.contributing}
+
+  ## Tests
+  ${response.tests}
+
+  ## Questions
+  ${response.questions}
 
   ### Image of code to application (Instructional Video Below Image!)
   ![screenshot](./Images/readmeGen.png)
@@ -62,6 +92,8 @@ inquirer.prompt([
   ### Instructional video
   https://drive.google.com/file/d/1kA92UGxCvJZp3kEGCHwUm4gV_t4za7a7/view
   `
+
+  
 fs.writeFile('README.md', readME, (err) => 
 err ? console.error(err) : console.log('Success!'))
   }
