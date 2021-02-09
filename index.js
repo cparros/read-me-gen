@@ -22,11 +22,6 @@ inquirer.prompt([
   },
   {
     type: 'input',
-    message: 'Please Input a table of contents for your project.',
-    name: 'tableOfContents'
-  },
-  {
-    type: 'input',
     message: 'How is your project installed?',
     name: 'installation'
   },
@@ -82,7 +77,12 @@ inquirer.prompt([
   ${response.description}
 
   ## Table of Contents
-  ${response.tableOfContents}
+  [Installation](#installation)
+  [Usage](#usage)
+  [License](#License)
+  [Contributors](#Contributors)
+  [Tests](#Tests)
+  [Questions](#Questions)
 
   ## Installation
   ${response.installation}
