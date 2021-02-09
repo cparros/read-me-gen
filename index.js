@@ -58,7 +58,9 @@ inquirer.prompt([
 
   ### Image of code to application
   ![screenshot](./Images/readmeGen.png)
-   link to instructional video: https://tinyurl.com/1qhye6o2
+  
+  ### Instructional video
+  https://drive.google.com/file/d/1kA92UGxCvJZp3kEGCHwUm4gV_t4za7a7/view
   `
 fs.writeFile('README.md', readME, (err) => 
 err ? console.error(err) : console.log('Success!'))
