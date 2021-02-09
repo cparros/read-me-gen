@@ -56,9 +56,9 @@ inquirer.prompt([
   ## Plans for Future Developement
   ${response.future}
 
-  ### Image of code to application
+  ### Image of code to application (Instructional Video Below Image!)
   ![screenshot](./Images/readmeGen.png)
-  
+
   ### Instructional video
   https://drive.google.com/file/d/1kA92UGxCvJZp3kEGCHwUm4gV_t4za7a7/view
   `
