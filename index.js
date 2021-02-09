@@ -60,7 +60,7 @@ inquirer.prompt([
 ]).then(response => {
   const badge = "https://img.shields.io/github/license/cparros/read-me-gen"
   const readME = `
-  # ${response.title} [<img src="${badge}
+  # ${response.title} [<img src="${badge}]
   
   ## The Description
   ${response.description}
